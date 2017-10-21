@@ -9,6 +9,8 @@ app.disable('x-powered-by')
 if(process.env.NODE_ENV === 'development') app.use(morgan('dev'))
 app.use(bodyParser.json())
 
+const floorRoutes = require('./src/routes')
+app.use('/floors', floorRoutes)
 
 app.use((err, req, res, next) => {
   const status = err.status || 500
