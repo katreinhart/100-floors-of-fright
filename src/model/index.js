@@ -17,7 +17,6 @@ function getOneFloor(id) {
   else {
     return { status: 404, message: "Floor not found" }
   }
-  
 }
 
 module.exports = {
